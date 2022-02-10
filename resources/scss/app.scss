@@ -1,0 +1,124 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.page-header {
+    .banner-wrapper {
+        @apply flex flex-col items-center justify-center bg-no-repeat bg-cover w-full h-80;
+
+        .titles {
+            @apply mt-24;
+            .title {
+                @apply text-3xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-4xl 2xl:text-5xl font-bold text-center text-white uppercase;
+            }
+            .subtitle {
+                @apply text-2xl text-center text-white uppercase;
+            }
+        }
+    }
+};
+
+.page-container {
+    @apply px-72;
+}
+.page-section {
+    @apply py-10 sm:py-10 md:py-14 lg:py-20 xl:py-20 2xl:py-20;
+}
+
+.header {
+    @apply fixed left-0 right-0 top-0;
+    .navbar {
+        @apply container mx-auto flex col-span-12 w-full h-20;
+        .logo-wrapper {
+            @apply w-1/2 flex h-full flex-wrap content-center;
+        }
+        .hero-section {
+
+        }
+    }
+}
+
+.main-nav {
+    @apply divide-x w-1/2 justify-center bg-primary rounded-b-lg flex space-x-2 font-semibold text-lg h-full flex-wrap content-center;
+    .nav-item {
+        .nav-item-link {
+            @apply text-sm lg:text-sm xl:text-base 2xl:text-base;
+            @apply cursor-pointer text-center text-white uppercase flex flex-wrap content-center;
+            @apply px-3 lg:px-3 xl:px-6 2xl:px-6;
+            .dropdown-nav {
+                top: 20px;
+                left: 4px;
+                display: none;
+            }
+            &:hover {
+                .dropdown-nav {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+// <-==============product--=============>
+.product-thumb {
+    @apply cursor-pointer block shadow hover:shadow-lg border rounded bg-white text-center h-full;
+    .img-wrapper {
+        @apply rounded-t w-full p-8;
+        height: 221px;
+    }
+    .demo-img-wrapper {
+        @apply p-0
+    }
+    .body {
+        @apply mb-2 mt-2;
+        .title {
+            @apply text-lg font-bold mt-2;
+        }
+        .subtitle {
+            @apply text-sm text-black font-semibold p-2;
+        }
+    }
+}
+
+
+//<--===========Profile card==============>
+.profile-card {
+    @apply rounded-lg shadow-md py-10 bg-blue-50;
+    .img-wrapper {
+        @apply rounded-full p-4 w-48 h-48 border-2 mx-auto;
+    }
+    .title {
+        @apply text-xl font-bold py-1 px-8 text-center;
+    }
+    .subtitle {
+        @apply text-primary text-base text-center font-bold;
+    }
+}
+
+.ant-carousel {
+    .slick-dots {
+        bottom: 4rem !important;
+        li button {
+            width: 40px !important;
+            height: 10px !important;
+            border-radius: 16px !important;
+        }
+    }
+}
+
+/* Backward */
+.hvr-backward {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hvr-backward:hover, .hvr-backward:focus, .hvr-backward:active {
+  -webkit-transform: translateX(-16px);
+  transform: translateX(-16px);
+}
+

@@ -1,0 +1,25 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class DosageForm extends Model
+{
+    use HasFactory;
+
+     protected $fillable = [
+        'name',
+        'display_name',
+        'description'
+     ];
+
+     protected $casts = [
+        'display_name' => 'string',
+        'description'  => 'string',
+        'created_at'   => 'datetime:Y-m-d H:i:s',
+        'updated_at'   => 'datetime:Y-m-d H:i:s',
+        'deleted_at'   => 'datetime:Y-m-d H:i:s'
+    ];
+}
